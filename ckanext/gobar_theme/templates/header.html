@@ -1,36 +1,40 @@
-<header id="header" class="navbar navbar-primary navbar-top">
+<nav id="header" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-xs-6 no_padding">
                 <div id="logo-sitio">
                     <a href="{{ h.url('home.index') }}" style="text-decoration: none;">
-                        <div id="ba-logo" class="navbar-brand img-responsive text-center" data-original-title="" title=""></div>      
+                        <div id="ba-logo" class="navbar-brand img-responsive text-center" data-original-title=""
+                            title=""></div>
                     </a>
                 </div>
                 <div class="h4-nunito-semibold-—-21-px" style="margin-top: 25px;">
                     <a href="{{ h.url('home.index') }}" style="color: var(--grisulado-90-texto-primario);">BA Data</a>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-xs-6">
                 <nav class="navbar navbar-expand-lg">
-                  <div class="container-fluid">
+                    <div class="container-fluid">
                         <div class="navbar-header">
-                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" style="
-    background-color: transparent; border: 1px solid black!important; border-radius: 4px!important; margin-right: 0; margin-top: 8px; padding: 9px 10px !important; ">
-                             <span class="sr-only">Cambiar navegación</span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                           </button>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#main-nav"
+                                style="background-color: transparent; border: 1px solid black!important; border-radius: 4px!important; margin-right: 0; margin-top: 8px; padding: 9px 10px !important; ">
+                                <span class="sr-only">Cambiar navegación</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                         </div>
                         <div class="collapse navbar-collapse" id="main-nav">
                             <ul class="nav navbar-nav navbar-right">
-                              <li><a href="{{ h.url_for(controller='dataset', action='search') }}">Datasets</a></li>
-                              <li><a href="{{ h.url_for(controller='organization', action='index') }}">Organizaciones</a></li>
-                              <li><a href="/Data/Historias">Historias</a></li>
-                              <li><a href="/Data/APIs">APIs</a></li>
-                              <li><a href="/Data/Acerca_de">Acerca de</a></li>
+                                <li><a href="{{ h.url_for(controller='dataset', action='search') }}">Datasets</a></li>
+                                <li><a
+                                        href="{{ h.url_for(controller='organization', action='index') }}">Organizaciones</a>
+                                </li>
+                                <li><a href="/Data/Historias">Historias</a></li>
+                                <li><a href="/Data/APIs">APIs</a></li>
+                                <li><a href="/Data/Acerca_de">Acerca de</a></li>
                             </ul>
                         </div>
                     </div>
@@ -38,4 +42,4 @@
             </div>
         </div>
     </div>
-</header>
+</nav>
