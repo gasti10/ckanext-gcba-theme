@@ -1,0 +1,22 @@
+{% import 'macros/form.html' as form %}
+
+{% set sorting = [
+('Última modificación', 'metadata_modified desc'),
+('Ascendente (A - Z)', 'title_string asc'),
+('Descendente (Z - A)', 'title_string desc')] %}
+
+<div class="order search-filter">
+    <h2 class="filter-title">Ordenar por</h2>
+
+    <select id="field-order-by" name="sort"
+        style="background: transparent; border: 0 !important; margin-left: 11px;color:#007BC7;">
+        {% for label, value in sorting %}
+        {% if label and value %}
+        <option value="{{ value }}" {% if sorting_selected==value %} selected="selected" {% endif %}>{{ label }}
+        </option>
+        {% endif %}
+        {% endfor %}
+    </select>
+
+    <hr>
+</div>

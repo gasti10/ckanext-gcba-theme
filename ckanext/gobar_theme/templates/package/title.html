@@ -1,22 +1,25 @@
 {% set stats = h.get_site_statistics() %}
 
-<div id="title" class="container-fluid" style="background-image:url(/img/bgbadata.jpg)">
-    <div class="background-overlay">
+<div id="title" class="container-fluid">
+    <div style="background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <div id="title-container" class="col-xs-12 col-md-6">
                     <h1>Datasets</h1>
-                    <p class="description">Estos son datos públicos generados, guardados y publicados por el Gobierno de la Ciudad de Buenos Aires.</p>
-                </div>
-                <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
-                    <div class="col-xs-12">
-                        <p class="stat">{{ "%03d" % stats.dataset_count }}</p>
-                        <p class="stats-legend datasets">CONJUNTOS DE DATOS</p>
+                    <p class="description">Estos son datos públicos generados, guardados y publicados por el Gobierno de
+                        la Ciudad de Buenos Aires.</p>
+                    <div class="form-group col-md-12" style="padding: 0;">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="search form-control" name="q" value="{{ c.q }}" autocomplete="off"
+                                placeholder="¿Qué dataset buscas?" maxlength="200"
+                                style="border-radius: 2px !important;background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 </div>
 
 {% asset 'gobar_js/background_ie' %}
