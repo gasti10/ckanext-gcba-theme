@@ -7168,6 +7168,7 @@ html, body {
 }
 
 body {
+  padding-top: 72px;
   background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -12139,7 +12140,7 @@ div#background-container svg#background g#dieciseis {
 #login-container #login h1 {
   margin: 20px 0;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
 }
 #login-container #login form {
   padding: 50px;
@@ -12328,6 +12329,7 @@ div#background-container svg#background g#dieciseis {
 }
 
 .organization-container {
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   display: table-row;
   height: 100%;
   padding-right: 0;
@@ -12516,7 +12518,7 @@ div#background-container svg#background g#dieciseis {
 #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
   margin: 20px 0;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
 }
 #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
   padding: 50px;
@@ -13252,7 +13254,7 @@ div#background-container svg#background g#dieciseis {
 .package-container {
   background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   height: 100%;
-  display: inline;
+  display: block;
   padding-right: 0;
   padding-left: 0;
 }
@@ -13651,7 +13653,7 @@ div#background-container svg#background g#dieciseis {
 #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
   margin: 20px 0;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
 }
 #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
   padding: 50px;
@@ -13891,7 +13893,7 @@ div#background-container svg#background g#dieciseis {
 }
 #edit-package-container #edit-package form ol.stages li, #edit-package-container #new-package form ol.stages li, #new-package-container #edit-package form ol.stages li, #new-package-container #new-package form ol.stages li {
   background: transparent;
-  color: white;
+  color: black;
   font-weight: 400;
   font-size: 18px;
 }
@@ -13906,8 +13908,8 @@ div#background-container svg#background g#dieciseis {
   line-height: 23px;
 }
 #edit-package-container #edit-package form ol.stages li.active .highlight, #edit-package-container #new-package form ol.stages li.active .highlight, #new-package-container #edit-package form ol.stages li.active .highlight, #new-package-container #new-package form ol.stages li.active .highlight {
-  color: white;
-  background: #0695d6;
+  color: black;
+  background: #fed11a;
 }
 #edit-package-container #edit-package form ol.stages li.complete .highlight, #edit-package-container #new-package form ol.stages li.complete .highlight, #new-package-container #edit-package form ol.stages li.complete .highlight, #new-package-container #new-package form ol.stages li.complete .highlight {
   color: white;
@@ -14013,7 +14015,8 @@ div#background-container svg#background g#dieciseis {
   padding-right: 0;
   padding-left: 0;
   height: 100%;
-  display: inline;
+  display: block;
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
 }
 @media (min-width: 992px) {
   .resource-container {
@@ -14024,6 +14027,7 @@ div#background-container svg#background g#dieciseis {
 .resource-container .resource {
   height: 100%;
   color: #999999;
+  background: white;
   color: #424242;
   font-size: 16px;
   padding-top: 20px;
@@ -14057,12 +14061,12 @@ div#background-container svg#background g#dieciseis {
 .resource-container .resource .title h1 {
   color: #0695d6;
   margin: 20px 0 0 0;
-  font-size: 26px;
+  font-size: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .resource-container .resource .title p {
-  font-size: 18px;
+  font-size: 16px;
 }
 .resource-container .resource .title button {
   background: #0695d6;
@@ -14383,7 +14387,7 @@ div#background-container svg#background g#dieciseis {
 #edit-group-container #edit-group h1, #edit-group-container #new-group h1, #new-group-container #edit-group h1, #new-group-container #new-group h1 {
   margin: 20px 0;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
 }
 #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
   padding: 50px;

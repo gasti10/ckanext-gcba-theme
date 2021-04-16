@@ -1,4 +1,5 @@
 .organization-container {
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   display: table-row;
   height: 100%;
   @include base-container();

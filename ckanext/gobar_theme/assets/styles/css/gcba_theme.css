@@ -392,7 +392,7 @@ FONTS:
 ------------------------------------------------------------------------------------
 */
 /* @font-face {
-  font-family: 'DisplayBold';
+  font-family: 'Nunito';
   src: url('/font/Chalet-NewYorkNineteenEighty.eot');
   src: url('/font/Chalet-NewYorkNineteenEighty.eot?#iefix') format('embedded-opentype'), url('/font/Chalet-NewYorkNineteenEighty.woff2') format('woff2'), url('/font/Chalet-NewYorkNineteenEighty.woff') format('woff'), url('/font/Chalet-NewYorkNineteenEighty.ttf') format('truetype'), url('/font/Chalet-NewYorkNineteenEighty.svg#Chalet-NewYorkNineteenEighty') format('svg');
   font-weight: normal;
@@ -412,7 +412,7 @@ GLOBALS:
 ------------------------------------------------------------------------------------
 */
 body {
-  font-family: 'Open Sans';
+  font-family: 'Nunito';
   font-size: 14px;
   font-weight: 400;
 }
@@ -424,17 +424,17 @@ button {
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
-    /* font-family: 'DisplayBold'; */
+    font-family: 'Nunito';
     letter-spacing: -0.5px;
     color: #333 !important;
 }
 h4, .h4, h5, .h5, h6, .h6 {
-    font-family: "OpenSans", Helvetica, Arial, sans-serif ;
+    font-family: "Nunito", Helvetica, Arial, sans-serif ;
     font-weight: 700 ;
     color: #333 ;
 }
 p {
-  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
 }
 a {
   color: #0388D0;
@@ -460,7 +460,7 @@ button,
 .add-dataset a,
 .add-organization a,
 .back-btn a {
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   background-color: #fed11a !important;
   color: #685723 !important;
@@ -495,7 +495,7 @@ input,
 select,
 textarea {
   height: auto !important;
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 1em !important;
@@ -508,7 +508,7 @@ select#field-order-by {
 }
 label,
 .label-control {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 500 !important;
 }
@@ -539,11 +539,11 @@ COMPONENTS:
 #title h4,
 #title h5,
 #title h6 {
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'Nunito' !important;
   color: var(--grisulado-90-texto-primario);
 }
 #title .description {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 21px !important;
   color: var(--grisulado-90-texto-primario);
 }
@@ -552,10 +552,10 @@ COMPONENTS:
   color: var(--grisulado-90-texto-primario);
 }
 #title .stat {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
 }
 #title .stats-legend {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 16px !important;
 }
 #title #searcher .search-form {
@@ -618,7 +618,7 @@ h2.title-h {
 #featured-content .featured-card h1 {
   display: block !important;
   width: 100% !important;
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'Nunito' !important;
   text-overflow: ellipsis !important;
   color: #000000 !important;
   overflow: hidden !important;
@@ -664,7 +664,7 @@ h2.title-h {
 
 .featured-groups .group-container .group .group-text .group-table {
   font-size: 15px !important;
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-weight: 700 !important;
 }
 a:hover .group-text .group-table {
@@ -737,7 +737,7 @@ a:hover .group-text .group-table {
 }
 .package-search .filters-container .search-filter .filter-values a span {
   color: #555555 !important;
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
 }
 .package-search .filters-container .search-filter .filter-values a:hover,
 .package-search .filters-container .search-filter .filter-values a:focus,
@@ -809,7 +809,7 @@ a:hover .group-text .group-table {
 .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
   display: block !important;
   width: 100% !important;
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'Nunito' !important;
   /*font-weight: 600 !important;*/
   text-overflow: ellipsis !important;
   color: #333 !important;
@@ -817,7 +817,7 @@ a:hover .group-text .group-table {
   white-space: nowrap !important;
 }
 .filter-title {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   color: #333 !important;
   font-weight: 700 !important;
   font-size: 18px !important;
@@ -826,11 +826,11 @@ a:hover .group-text .group-table {
   font-size: 14px !important;
   font-weight: 400 !important;
   color: #bfbfbf !important;
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-weight: 600 !important;
 }
 .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-notes {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 400 !important;
 }
@@ -854,7 +854,7 @@ a:hover .group-text .group-table {
     opacity: 0.6 !important;
 }
 .pagination ul li a {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 16px !important;
   font-weight: 400 !important;
   color: #525252 !important;
@@ -869,7 +869,7 @@ a:hover .group-text .group-table {
   box-shadow: none !important;
 }
 .package #pkg-main-info #pkg-path {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   color: #525252 !important;
@@ -879,7 +879,7 @@ a:hover .group-text .group-table {
   color: #0388D0;
 }
 .package #pkg-main-info #pkg-title-and-desc .pkg-title {
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'Nunito' !important;
   /*font-weight: 600 !important;*/
   margin-bottom: 15px !important;
   color: #000000 !important;
@@ -947,13 +947,13 @@ a:hover .group-text .group-table {
   margin-bottom: 30px !important;
 }
 .package #pkg-secondary-info #info-container {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   color: #525252 !important;
 }
 .package #pkg-secondary-info #info-container .title {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 700 !important;
   color: #525252 !important;
@@ -1021,7 +1021,7 @@ a:hover .group-text .group-table {
 #footer a,
 #footer span,
 #footer p {
-  font-family: 'Open Sans' !important;
+  font-family: 'Nunito' !important;
   font-size: 14px !important;
   font-weight: 400 !important;
 }
@@ -1103,7 +1103,7 @@ Fonts
 */
 
 .resource-container .resource .back-to-pkg, .nav-tabs, .btn-group, .btn-group-vertical, .resource-container .resource .resource-additional-info .resource-additional, #metadata-table, .recline-flot .graph, .organization-list-title, .organization-branch {
-    font-family: 'Open sans' !important;
+    font-family: 'Nunito' !important;
 }
 .resource-container .resource .resource-additional-info .resource-additional .key {
     font-weight: 700 !important;
@@ -1166,7 +1166,7 @@ Fonts
 }
 
 #edit-package-container #edit-package form .resource-nav a div {
-  color: #19c3e3;
+  color: var(--celeste-50-texto-enlace);
 }
 #edit-package-container #edit-package form .resource-nav a:hover div {
   color: #888 !important;
@@ -1186,20 +1186,20 @@ Fonts
 /*EDIT // FORM */
 #edit-package-container #edit-package form .control-group .after-desc, #edit-package-container #new-package form .control-group .after-desc, #new-package-container #edit-package form .control-group .after-desc, #new-package-container #new-package form .control-group .after-desc {
     font-size: 12px;
-        font-family: "OpenSans", Helvetica, Arial, sans-serif !important;
+        font-family: "Nunito", Helvetica, Arial, sans-serif !important;
 }
 #resource-edit #resource-attributes-form .resource-attributes-group .resource-attributes-input-container .resource-attributes-input-disclaimer {
   font-size: 12px !important;
   color: #767676 !important;
   margin: 10px 0 0 0;
-  font-family: "OpenSans", Helvetica, Arial, sans-serif !important;
+  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
 }
 #edit-package-container #edit-package form .control-group label, #edit-package-container #new-package form .control-group label, #new-package-container #edit-package form .control-group label, #new-package-container #new-package form .control-group label {
   color: #333 !important;
   font-weight: 700 !important;
 }
 .select2-container, .select2-result-label {
-  font-family: "OpenSans", Helvetica, Arial, sans-serif !important;
+  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
 }
 /*EDIT // FORM BTNS */
 .back-btn .icon-chevron-left, .btn .icon-cloud-upload, .btn .icon-plus-sign-alt {
@@ -1209,12 +1209,12 @@ Fonts
   margin-top: 0;
 }
 .resource-view-add-filter {
-  font-family: "OpenSans", Helvetica, Arial, sans-serif !important;
+  font-family: "Nunito", Helvetica, Arial, sans-serif !important;
 }
 
 /*EDIT // TABLE */
 #edit-package .table {
-    font-family: "OpenSans", Helvetica, Arial, sans-serif !important;
+    font-family: "Nunito", Helvetica, Arial, sans-serif !important;
     font-size: 14px;
 
 }

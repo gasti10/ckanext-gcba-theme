@@ -1,7 +1,7 @@
 .package-container {
   background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   height: 100%;
-  display: inline;
+  display: block;
   @include base-container();
   .package {
     height: 100%;

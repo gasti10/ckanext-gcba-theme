@@ -7,6 +7,7 @@
     </div>
     {% endif %}
 
+    {#
     {% set facets = {
     'fields': c.fields_grouped,
     'search': c.search_facets,
@@ -14,11 +15,13 @@
     'translated_fields': c.translated_fields,
     'remove_field': c.remove_field } %}
 
-    {#
-    {% snippet 'package/snippets/search_form.html', form_id='dataset-search-form', type='dataset', query=c.q,
+
+    {% snippet 'package/snippets/search_form.html', form_id='dataset-search-form', type='dataset',
+    query=c.q,
     sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets,
     show_empty=request.params, error=c.query_error, fields=c.fields %}
     #}
+
 
     <div class="dataset-list">
         {%- set packages = c.page.items -%}
