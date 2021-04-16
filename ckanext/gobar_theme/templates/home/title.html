@@ -1,22 +1,21 @@
 {% set stats = h.get_site_statistics() %}
 
-<div id="title" class="container-fluid">
-    <div>
+<div id="title" class="container-fluid" style="background-image:url(/img/bgbadata.jpg)">
+    <div class="background-overlay">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                 <div id="title-container" class="col-xs-12 col-md-7">
                     <h1>Buenos Aires Data</h1>
 
                     <p class="description">
-                        Abrimos los datos que produce la Ciudad para que puedas desarrollar aplicaciones, contar
-                        historias y poner en valor los datos de Buenos Aires.
+                        Abrimos los datos que produce la Ciudad para que puedas desarrollar aplicaciones, contar historias y poner en valor los datos de Buenos Aires.    
                     </p>
                 </div>
                 <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-4 no-padding">
                     <form class="module-content search-form" method="get"
-                        action="{% url_for controller='dataset', action='search' %}">
+                          action="{% url_for controller='dataset', action='search' %}">
                         <input type="text" class="search" name="q" value="" autocomplete="off"
-                            placeholder="¿Qué dataset buscás?" maxlength="200" />
+                               placeholder="¿Qué dataset buscás?" maxlength="200"/>
                         <button type="submit">
                             <img src="/img/search.svg" class="search-icon">
                         </button>
@@ -36,7 +35,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 </div>
 
 {% asset 'gobar_js/background_ie' %}

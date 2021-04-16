@@ -1,7 +1,6 @@
 .package-container {
-  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   height: 100%;
-  display: inline;
+  display: table-row;
   @include base-container();
   .package {
     height: 100%;
@@ -24,7 +23,3 @@
 @import 'snippets/main_info';
 @import 'snippets/secondary_info';
 @import 'snippets/recent_activity';
-
-.display-block {
-  display: block;
-}

@@ -1,6 +1,8 @@
 #edit-package-container, #new-package-container {
   @include base-container();
+  height: 100%;
   #edit-package, #new-package {
+    @include base-content();
     @include base-form();
     height: 100%;
     padding: 0;

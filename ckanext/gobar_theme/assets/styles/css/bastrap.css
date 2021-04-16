@@ -30,6 +30,17 @@
     font-style: normal; 
   }
 
+/*  Bootstrap Icons
+* ======================================================================= */
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("fonts/glyphicons-halflings-regular.eot");
+    src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), 
+        url("fonts/glyphicons-halflings-regular.woff") format("woff"), 
+        url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), 
+        url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); 
+  }
+
 /*  BAstrap Icons
 * ======================================================================= */
   @font-face {
@@ -2228,7 +2239,7 @@
   * ==================================================== */
   .navbar-default .navbar-nav > li > a,
   .navbar-default .navbar-brand {
-    color: var(--grisulado-90-texto-primario);
+    color: #888;
   }
   
   .navbar-default .dropdown-menu > li > a:hover,

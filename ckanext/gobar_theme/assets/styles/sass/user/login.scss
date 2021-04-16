@@ -1,10 +1,11 @@
 #login-container {
   height: 100%;
   @include base-container();
-  display: block;
+  display: table-row;
   #login {
     display: table;
     height: 100%;
+    @include base-content();
     @include base-form();
 
     #login-vertical-wrapper {
@@ -13,7 +14,6 @@
     }
 
     form {
-      background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;
       width: 100%;
       @include breakpoint-sm {
         width: 600px;

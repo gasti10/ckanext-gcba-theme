@@ -79,7 +79,7 @@ span strong, thead > tr > th, .progress-bar {
 }
 
 body { 
-  background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;
+  background: var(--grisulado-1-fondo-secundario);
   font-family: var(--unnamed-font-family-nunito);
   line-height: 24px;
   font-style: var(--unnamed-font-style-normal); 

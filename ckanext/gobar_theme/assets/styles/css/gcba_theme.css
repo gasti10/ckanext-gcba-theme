@@ -391,7 +391,7 @@ use another character */
 FONTS:
 ------------------------------------------------------------------------------------
 */
-/* @font-face {
+@font-face {
   font-family: 'DisplayBold';
   src: url('/font/Chalet-NewYorkNineteenEighty.eot');
   src: url('/font/Chalet-NewYorkNineteenEighty.eot?#iefix') format('embedded-opentype'), url('/font/Chalet-NewYorkNineteenEighty.woff2') format('woff2'), url('/font/Chalet-NewYorkNineteenEighty.woff') format('woff'), url('/font/Chalet-NewYorkNineteenEighty.ttf') format('truetype'), url('/font/Chalet-NewYorkNineteenEighty.svg#Chalet-NewYorkNineteenEighty') format('svg');
@@ -404,7 +404,7 @@ FONTS:
   src: url('/font/Chalet-LondonNineteenEighty.eot?#iefix') format('embedded-opentype'), url('/font/Chalet-LondonNineteenEighty.woff2') format('woff2'), url('/font/Chalet-LondonNineteenEighty.woff') format('woff'), url('/font/Chalet-LondonNineteenEighty.ttf') format('truetype'), url('/font/Chalet-LondonNineteenEighty.svg#Chalet-LondonNineteenEighty') format('svg');
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 /*
 ------------------------------------------------------------------------------------
@@ -424,7 +424,7 @@ button {
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
-    /* font-family: 'DisplayBold'; */
+    font-family: 'DisplayBold';
     letter-spacing: -0.5px;
     color: #333 !important;
 }
@@ -444,7 +444,7 @@ a {
   transition: 0.25s;
 }
 a span {
-  color: var(--grisulado-70-texto-secundario);
+  color: #0388D0;
 }
 .breadcrumb a {
   color: #0388D0;
@@ -460,7 +460,7 @@ button,
 .add-dataset a,
 .add-organization a,
 .back-btn a {
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'DisplayBold' !important;
   font-size: 14px !important;
   background-color: #fed11a !important;
   color: #685723 !important;
@@ -523,11 +523,11 @@ COMPONENTS:
 ------------------------------------------------------------------------------------
 */
 #title {
-  color: var(--grisulado-90-texto-primario);
+  color: #222222 !important;
   background-size: cover !important;
   background-position: bottom center !important;
   background-repeat: no-repeat !important;
-  background-color: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box im !important;
+  background-color: #666 !important;
 }
 #title .background-overlay,
 #title .stats-overlay {
@@ -539,17 +539,17 @@ COMPONENTS:
 #title h4,
 #title h5,
 #title h6 {
-  /* font-family: 'DisplayBold' !important; */
-  color: var(--grisulado-90-texto-primario);
+  font-family: 'DisplayBold' !important;
+  color: #ffffff !important;
 }
 #title .description {
   font-family: 'Open Sans' !important;
   font-size: 21px !important;
-  color: var(--grisulado-90-texto-primario);
+  color: #ffffff !important;
 }
 #title .stat,
 #title .stats-legend {
-  color: var(--grisulado-90-texto-primario);
+  color: #ffffff !important;
 }
 #title .stat {
   font-family: 'Open Sans' !important;
@@ -618,7 +618,7 @@ h2.title-h {
 #featured-content .featured-card h1 {
   display: block !important;
   width: 100% !important;
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'DisplayBold' !important;
   text-overflow: ellipsis !important;
   color: #000000 !important;
   overflow: hidden !important;
@@ -720,6 +720,7 @@ a:hover .group-text .group-table {
 }
 .package-search .filters-container {
   min-height: 500px !important;
+  background: #f9f9f9 !important;
   border-right: 0 !important;
   padding-top: 50px;
 }
@@ -753,6 +754,7 @@ a:hover .group-text .group-table {
 .package-search .filters-container .search-filter .filter-values li:focus,
 .package-search .filters-container .search-filter .filter-values li.active {
   color: #000000 !important;
+  background-color: #fed11a !important;
 }
 .filters-container .search-filter .group-images .group-image-container.available:hover svg path, .filters-container .search-filter .group-images .group-image-container.available:hover svg rect {
     fill: #F7CD0F !important;
@@ -802,6 +804,7 @@ a:hover .group-text .group-table {
 }
 .dataset-list .dataset-item .dataset-container .dataset-border {
   padding: 22.5px !important;
+  border-right: solid 6px #cccccc !important;
 }
 .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content {
   line-height: 1.25em !important;
@@ -809,7 +812,7 @@ a:hover .group-text .group-table {
 .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
   display: block !important;
   width: 100% !important;
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'DisplayBold' !important;
   /*font-weight: 600 !important;*/
   text-overflow: ellipsis !important;
   color: #333 !important;
@@ -844,6 +847,8 @@ a:hover .group-text .group-table {
 .dataset-list .dataset-item .dataset-container .dataset-border:hover,
 .dataset-list .dataset-item .dataset-container .dataset-border:focus,
 .dataset-list .dataset-item .dataset-container .dataset-border.active {
+  border-right: solid 6px #fed11a !important;
+  background-color: #f9f6ea;
   box-shadow: 5px 5px 13px -2px rgba(102, 102, 102, 0.16);
 }
 #featured-content-container #featured-content .table-wrapper a:hover {
@@ -879,7 +884,7 @@ a:hover .group-text .group-table {
   color: #0388D0;
 }
 .package #pkg-main-info #pkg-title-and-desc .pkg-title {
-  /* font-family: 'DisplayBold' !important; */
+  font-family: 'DisplayBold' !important;
   /*font-weight: 600 !important;*/
   margin-bottom: 15px !important;
   color: #000000 !important;
@@ -904,6 +909,7 @@ a:hover .group-text .group-table {
   margin-bottom: 15px !important;
 }
 .package #pkg-main-info #pkg-resources {
+  background-color: #f9f9f9 !important;
   border-bottom: 0 !important;
   padding: 0 15px 0 15px !important;
 }

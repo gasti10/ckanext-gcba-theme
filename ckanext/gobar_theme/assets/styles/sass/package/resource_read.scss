@@ -1,7 +1,7 @@
 .resource-container {
   @include base-container();
   height: 100%;
-  display: inline;
+  display: table-row;
   .resource {
     height: 100%;
     color: $grey-300;
