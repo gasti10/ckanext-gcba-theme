@@ -1,5 +1,4 @@
 #pkg-main-info {
-  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   #pkg-path {
     color: $grey-300;
     margin-top: 20px;
@@ -15,7 +14,7 @@
       margin-left: 16px;
     }
     p.pkg-author {
-      color: $grey-400;
+      color: var(--grisulado-90-texto-primario);
       font-size: 16px;
       svg {
         vertical-align: middle;
@@ -46,6 +45,7 @@
     }
   }
   #pkg-resources {
+    background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
     padding-bottom: 20px;
     border-bottom: solid 1px $grey-300;
     @include breakpoint-md {
