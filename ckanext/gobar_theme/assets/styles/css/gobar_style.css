@@ -13251,6 +13251,10 @@ div#background-container svg#background g#dieciseis {
   margin: 0;
 }
 
+.white-back {
+  background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box !important;
+}
+
 .package-container {
   background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   height: 100%;
@@ -13290,6 +13294,9 @@ div#background-container svg#background g#dieciseis {
   padding-bottom: 99999px;
 }
 
+#pkg-main-info {
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
+}
 #pkg-main-info #pkg-path {
   color: #999999;
   margin-top: 20px;
@@ -13343,6 +13350,9 @@ div#background-container svg#background g#dieciseis {
   }
 }
 
+#pkg-secondary-info {
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
+}
 #pkg-secondary-info h2.secondary-info-title {
   color: #0695d6;
   margin-top: 58px;
