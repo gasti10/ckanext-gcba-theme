@@ -13294,9 +13294,6 @@ div#background-container svg#background g#dieciseis {
   padding-bottom: 99999px;
 }
 
-#pkg-main-info {
-  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
-}
 #pkg-main-info #pkg-path {
   color: #999999;
   margin-top: 20px;
@@ -13311,7 +13308,7 @@ div#background-container svg#background g#dieciseis {
   margin-left: 16px;
 }
 #pkg-main-info #pkg-title-and-desc p.pkg-author {
-  color: #767676;
+  color: var(--grisulado-90-texto-primario);
   font-size: 16px;
 }
 #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
@@ -13341,6 +13338,7 @@ div#background-container svg#background g#dieciseis {
   height: 15px;
 }
 #pkg-main-info #pkg-resources {
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
   padding-bottom: 20px;
   border-bottom: solid 1px #999999;
 }
