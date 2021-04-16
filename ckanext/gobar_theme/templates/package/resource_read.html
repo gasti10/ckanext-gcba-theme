@@ -92,7 +92,7 @@
             {% set has_more_resources = pkg.resources and pkg.resources|length > 1 %}
 
             {% if has_more_resources %}
-            <div class="resource-alternative-packages col-xs-12 col-md-8">
+            <div class="resource-alternative-packages col-xs-12 col-md-12">
                 <h2>Otros recursos de este conjunto de datos</h2>
                 {% for resource in pkg.resources %}
                 {% if resource.id != res.id %}
@@ -107,8 +107,7 @@
             </div>
             {% endif %}
 
-            <div
-                class="resource-additional-info col-xs-12 col-md-4 {{ '' if has_more_resources else 'col-md-offset-8' }}">
+            <div class="resource-additional-info col-xs-12 col-md-12">
                 <h2>Información adicional</h2>
 
                 <div class="resource-additional col-xs-12">

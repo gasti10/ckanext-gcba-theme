@@ -5,6 +5,7 @@
 @import 'utils/bootstrap_style';
 @import 'fonts';
 @import 'utils/colors';
+$header-height: 72px;
 
 html, body {
   padding: 0;
@@ -12,6 +13,7 @@ html, body {
 }
 
 body {
+  padding-top: $header-height;
   background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
