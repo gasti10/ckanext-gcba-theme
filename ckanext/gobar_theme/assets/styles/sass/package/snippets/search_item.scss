@@ -1,5 +1,7 @@
 .dataset-list {
   .dataset-item {
+    background: var(--blanco-fondo-primario) 0% 0% no-repeat padding-box;
+
     .dataset-container {
       padding: 0;
       border: solid 0 transparent;
@@ -10,7 +12,6 @@
       overflow: hidden;
 
       .dataset-border {
-        border-right: solid 8px $grey-300;
         padding: 15px;
         @include transition-delay(0s);
         @include transition-duration(200ms);
@@ -80,6 +81,9 @@
 
     &:hover {
       color: inherit;
+      border-color:  #38485C33;
+      box-shadow: 0 0px 0px #38485C33 inset, 0 0 8px #38485C33;
+      outline: 0 none;
       .dataset-border {
         border-right-color: $blue-300;
         .dataset-content .dataset-title {
