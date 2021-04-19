@@ -149,7 +149,7 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
 
 def render_ar_datetime(datetime_):
     datetime_ = ckan_helpers._datestamp_to_datetime(datetime_)
-    months = ["Enero", "Febrero", "Marzo", "Abri", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     if not datetime_:
         return ''
     details = {

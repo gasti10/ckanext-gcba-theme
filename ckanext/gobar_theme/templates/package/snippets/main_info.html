@@ -19,19 +19,29 @@
 
         <p class="pkg-notes">{{ pkg.notes }}</p>
 
+        {% if h.check_access('package_update', {'id':pkg.id }) %}
+            {% link_for 'AGREGAR NUEVO RECURSO',  named_route=pkg.type ~ '_resource.new', id=pkg.name, class_='btn btn-blue add-resource' %}
+        {% endif %}
+
         <h2 class="pkg-resources-title">Recursos del dataset</h2>
     </div>
 
     <div id="pkg-resources">
         {% for resource in pkg.resources %}
+            {% set mostrar = true %}
             {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}
-                {% set format = "otro" %}
+                {% if resource.datastore_active == False and resource.url == "" and resource.description == "" and resource.has_views == False and resource.position == 0 %}
+                    {% set mostrar = false %}
+                {% else %}    
+                    {% set format = "otro" %}
+                {% endif %}
             {% else %}
                 {% set format = resource.format %}
             {% endif %}
-            {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format, is_activity_archive=is_activity_archive %}
+            {% if mostrar %}
+                {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format, is_activity_archive=is_activity_archive %}
+            {% endif %}
         {% endfor %}
-
     </div>
 
 </div>

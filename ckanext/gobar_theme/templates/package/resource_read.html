@@ -95,14 +95,21 @@
             <div class="resource-alternative-packages col-xs-12 col-md-12">
                 <h2>Otros recursos de este conjunto de datos</h2>
                 {% for resource in pkg.resources %}
-                {% if resource.id != res.id %}
-                {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}
-                {% set format = "otro" %}
-                {% else %}
-                {% set format = resource.format %}
-                {% endif %}
-                {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format %}
-                {% endif %}
+                    {% set mostrar = true %}
+                    {% if resource.id != res.id %}
+                        {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}
+                            {% if resource.datastore_active == False and resource.url == "" and resource.description == "" and resource.position == 0 %}
+                                {% set mostrar = false %}
+                            {% else %}    
+                                {% set format = "otro" %}
+                            {% endif %}
+                        {% else %}
+                            {% set format = resource.format %}
+                        {% endif %}
+                        {% if mostrar %}
+                            {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format %}
+                        {% endif %}
+                    {% endif %}
                 {% endfor %}
             </div>
             {% endif %}

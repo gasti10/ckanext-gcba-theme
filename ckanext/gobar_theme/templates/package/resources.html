@@ -17,18 +17,24 @@
                     </div>
                     <h1>Recursos del dataset</h1>
                     <div class="form-like">
-                        <div class="page_primary_action action-buttons"></div>
-                        <div class="spacer"></div>
-                        <ul class="resource-list"{% if has_reorder %} data-module="resource-reorder"
-                            data-module-id="{{ c.pkg_dict.id }}"{% endif %}>
-                            {% for resource in c.pkg_dict.resources %}
-                                {% snippet 'package/snippets/resource_item.html', pkg=c.pkg_dict, res=resource, url_is_edit=true %}
-                            {% endfor %}
-                        </ul>
-                        <div class="resource-actions">
-                            {% link_for 'EDITAR DATASET', controller='dataset', action='edit', id=c.pkg_dict.name, class_='btn btn-blue edit-dataset-button' %}
-                            {% link_for 'AGREGAR NUEVO RECURSO', named_route=pkg_dict.type ~ '_resource.new', id=c.pkg_dict.name, class_='btn btn-blue add-resource' %}
-                        </div>
+                        {% if c.pkg_dict.resources %}
+                            <div class="page_primary_action action-buttons"></div>
+                            <div class="spacer"></div>
+                            <ul class="resource-list"{% if has_reorder %} data-module="resource-reorder"
+                                data-module-id="{{ c.pkg_dict.id }}"{% endif %}>
+                                {% for resource in c.pkg_dict.resources %}
+                                    {% snippet 'package/snippets/resource_item.html', pkg=c.pkg_dict, res=resource, url_is_edit=true %}
+                                {% endfor %}
+                            </ul>
+                            <div class="resource-actions">
+                                {% link_for 'EDITAR DATASET', controller='dataset', action='edit', id=c.pkg_dict.name, class_='btn btn-blue edit-dataset-button' %}
+                                {% link_for 'AGREGAR NUEVO RECURSO', named_route=pkg_dict.type ~ '_resource.new', id=c.pkg_dict.name, class_='btn btn-blue add-resource' %}
+                            </div>
+                        {% else %}
+                            {% trans url=h.url_for(pkg.type ~ '_resource.new', id=pkg.name) %}
+                              <p class="empty">Este dataset está sin datos, <a href="{{ url }}">porque no agregas algo ?</a></p>
+                            {% endtrans %}
+                        {% endif %}    
                     </div>
                 </div>
             </div>
