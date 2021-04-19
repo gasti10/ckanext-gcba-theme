@@ -571,9 +571,8 @@ COMPONENTS:
   width: 45px !important;
   height: 100% !important;
   color: #ffffff !important;
-  background: url('/img/search.svg') center center no-repeat !important;
+  background-color: transparent !important;
   background-size: 20px !important;
-  background-color: #222222 !important;
   border-radius: 0 6px 6px 0 !important;
 }
 #title #searcher .search-form button img {
