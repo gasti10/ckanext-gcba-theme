@@ -11743,7 +11743,6 @@ div#background-container svg#background g#dieciseis {
   #title #searcher {
     position: absolute;
     bottom: 0;
-    left: 25px;
     padding: 0;
   }
 }
@@ -11752,10 +11751,10 @@ div#background-container svg#background g#dieciseis {
   border: none;
 }
 #title #searcher form input[type=text] {
-  background: transparent;
-  border: none;
+  background: var(--grisulado-1-fondo-secundario) 0% 0% no-repeat padding-box;
+  border-color: transparent !important;
   width: 100%;
-  color: white;
+  color: var(--grisulado-90-texto-primario);
   -o-box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -11780,42 +11779,24 @@ div#background-container svg#background g#dieciseis {
   }
 }
 #title #searcher form input[type=text]::-webkit-input-placeholder {
-  color: white;
+  color: var(--grisulado-30-texto-deshabilitado);
   font-weight: 300;
   font-size: 16px;
 }
 #title #searcher form input[type=text]::-moz-placeholder {
-  color: white;
+  color: var(--grisulado-30-texto-deshabilitado);
   font-weight: 300;
   font-size: 16px;
 }
 #title #searcher form input[type=text]:-moz-placeholder {
-  color: white;
+  color: var(--grisulado-30-texto-deshabilitado);
   font-weight: 300;
   font-size: 16px;
 }
 #title #searcher form input[type=text]:-ms-input-placeholder {
-  color: white;
+  color: var(--grisulado-30-texto-deshabilitado);
   font-weight: 300;
   font-size: 16px;
-}
-#title #searcher form button {
-  background: none;
-  border: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 34.8px;
-}
-#title #searcher form button .search-icon {
-  width: auto;
-  height: 100%;
-  padding: 4px 0;
-}
-@media (min-width: 992px) {
-  #title #searcher form button {
-    height: 38.8px;
-  }
 }
 #title #stats {
   text-align: center;
@@ -13897,7 +13878,7 @@ div#background-container svg#background g#dieciseis {
 }
 #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
   margin: 0 0 50px 0;
-  background: #cccccc;
+  background: #cccccc !important;
 }
 #edit-package-container #edit-package form ol.stages li, #edit-package-container #new-package form ol.stages li, #new-package-container #edit-package form ol.stages li, #new-package-container #new-package form ol.stages li {
   background: transparent;
@@ -13920,8 +13901,9 @@ div#background-container svg#background g#dieciseis {
   background: #fed11a;
 }
 #edit-package-container #edit-package form ol.stages li.complete .highlight, #edit-package-container #new-package form ol.stages li.complete .highlight, #new-package-container #edit-package form ol.stages li.complete .highlight, #new-package-container #new-package form ol.stages li.complete .highlight {
+  padding: 10px 52px !important;
   color: white;
-  background: #cccccc;
+  background: #cccccc !important;
 }
 #edit-package-container #edit-package form .form-actions, #edit-package-container #new-package form .form-actions, #new-package-container #edit-package form .form-actions, #new-package-container #new-package form .form-actions {
   border: none;
@@ -14068,8 +14050,7 @@ div#background-container svg#background g#dieciseis {
 }
 .resource-container .resource .title h1 {
   color: #0695d6;
-  margin: 20px 0 0 0;
-  font-size: 50px;
+  font-size: 25px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -14127,14 +14108,10 @@ div#background-container svg#background g#dieciseis {
 .resource-container .resource .resource-attributes table colgroup .col-attribute {
   width: 120px;
 }
-.resource-container .resource .resource-attributes table thead tr {
-  background: #0695d6;
-  color: white;
-}
 .resource-container .resource .resource-attributes table thead tr th {
-  font-weight: 500;
+  font-weight: 900;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   border-left: solid 1px white;
   border-right: solid 1px white;
 }
@@ -14148,12 +14125,9 @@ div#background-container svg#background g#dieciseis {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
 }
-.resource-container .resource .resource-attributes table tbody tr:last-child {
-  border-bottom: solid 5px #0695d6;
-}
 .resource-container .resource .resource-attributes table tbody tr td {
   padding: 10px;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
   border-right: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
