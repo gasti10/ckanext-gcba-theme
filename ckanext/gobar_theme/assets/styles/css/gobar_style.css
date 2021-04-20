@@ -11626,17 +11626,15 @@ div#background-container svg#background g#dieciseis {
   padding: 0 !important;
 }
 
-.modal-backdrop.in {
-  background: white;
-  opacity: 0.8;
-}
-
 .modal {
   border: none;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+}
+.modal .modal-header .close {
+  opacity: 1;
 }
 .modal .modal-dialog {
   width: 100%;
@@ -13741,6 +13739,7 @@ div#background-container svg#background g#dieciseis {
 #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
   color: #0695d6;
   margin: 20px 0;
+  font-size: 25px;
 }
 #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
   padding: 50px;
@@ -14109,7 +14108,7 @@ div#background-container svg#background g#dieciseis {
   width: 120px;
 }
 .resource-container .resource .resource-attributes table thead tr th {
-  font-weight: 900;
+  font-weight: 500;
   padding: 10px;
   text-align: center;
   border-left: solid 1px white;
