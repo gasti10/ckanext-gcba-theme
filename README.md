@@ -1,8 +1,8 @@
-# [datos.gob.ar](http://datos.gob.ar/)
+# [data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
 
 CORRGIR
 
-Repositorio de la extensión del Portal [datos.gob.ar](http://datos.gob.ar/) de la República Argentina para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero. El repositorio central del proyecto del Portal datos.gob.ar es [portal_datos.gob.ar](https://github.com/datosgobar/portal_datos.gob.ar)
+Repositorio de la extensión del Portal [data.buenosaires.gob.ar](http://data.buenosaires.gob.ar/) de la Ciudad de Buenos Aires para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero. El repositorio central del proyecto del Portal data.buenosaires.gob.ar se encuentra 
 
 - [Instalación](#instalaci%C3%B3n)
 - [Desarrollo](#desarrollo)
