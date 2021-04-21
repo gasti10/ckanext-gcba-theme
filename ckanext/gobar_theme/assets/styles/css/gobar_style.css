@@ -10853,6 +10853,11 @@ strong {
   max-width: 100%;
 }
 
+.dropdown-menu {
+  font-size: 19px;
+  padding: 10px;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
