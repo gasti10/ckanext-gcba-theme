@@ -21,6 +21,7 @@
 
         {% if h.check_access('package_update', {'id':pkg.id }) %}
             {% link_for 'AGREGAR NUEVO RECURSO',  named_route=pkg.type ~ '_resource.new', id=pkg.name, class_='btn btn-blue add-resource' %}
+            {% link_for 'ADMINISTRAR RECURSOS', named_route=pkg.type ~ '.resources', id=pkg.name, class_='btn btn-blue resources' %}
         {% endif %}
 
         <h2 class="pkg-resources-title">Recursos del dataset</h2>
