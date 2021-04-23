@@ -1,13 +1,11 @@
-# [data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
+# [Data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
 
 Repositorio de la extensión del Portal [data.buenosaires.gob.ar](http://data.buenosaires.gob.ar/) de la Ciudad de Buenos Aires para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero.
 
 - [Instalación](#instalaci%C3%B3n)
-- [Desarrollo](#desarrollo)
 - [Estructura de archivos](#estructura-de-archivos)
 - [Uso del theme](#uso-del-theme) --> HACER
 - [Créditos](#cr%C3%A9ditos)
-- [Consultas sobre Andino](#consultas-sobre-andino)
 
 ## Instalación
 
@@ -35,6 +33,10 @@ Correr dentro del entorno virtual de python(venv) para instalaciones hechas con 
         - package_controller.py # controlador de lógica de datasets y recursos, sobreescribe y/o extiende la lógica de ckan
         - plugin.py # archivo que registra el repositorio como extensión de ckan y declara acciones, helpers y ruteo
 ```
+
+## Uso del theme
+
+La extensión sirve para darle una nueva vista al CKAN original, fue desarrollada utilizando como base el gobar_theme de Nación(https://github.com/datosgobar/datos.gob.ar) y refactorizado para darle la visual requerida por el Gobierno de la Ciudad de Buenos Aires. Aún contiene algunas fallas en los estilos debido a las nuevas actualizaciones que sufrió el CKAN y que fueron "parcheadas" sobre la marcha.
 
 ## Créditos
 
