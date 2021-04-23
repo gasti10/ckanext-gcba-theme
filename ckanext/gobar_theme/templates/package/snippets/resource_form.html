@@ -33,7 +33,7 @@
             {% else %}
                 {% set after_desc_title = ["Por favor, para que el título del recurso sea más claro, <b>no superes los ", max_length_title, " caracteres.</b>"] %}
             {% endif %}
-            {{ form.input_custom('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], attrs={'data-valid-title-length': max_length_title}, after_desc=after_desc_title|join|safe, max_length=max_length_title) }}
+            {{ form.input_custom('name', id='name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], attrs={'data-valid-title-length': max_length_title}, after_desc=after_desc_title|join|safe, max_length=max_length_title) }}
         {% endblock %}
 
         {% block basic_fields_description %}
@@ -47,10 +47,11 @@
         {% endblock %}
 
         {% block basic_fields_url %}
-            {% set is_upload = (data.url_type == 'upload') %}
-            {{ form.image_upload(data, errors, field_url='url', field_upload='upload', field_clear='clear_upload',
-         is_upload_enabled=h.uploads_enabled(), is_url=data.url and not is_upload, is_upload=is_upload,
-         upload_label=_('File'), url_label=_('URL'),placeholder=_('http://example.com/external-data.csv'), field_name='name') }}
+        {{ form.image_upload(data, errors, field_url='url', field_upload='upload', field_clear='clear_upload', is_upload_enabled=false, is_url=data.url, url_label=_('URL'),placeholder=_('http://example.com/external-data.csv'), field_name='name') }}
+        {% endblock %}
+
+        {% block basic_fields_upload %}
+            {{ form.input('upload', id='field-name', label=_('Filename'), placeholder=_('Input para el campo upload'), value=data.upload, error=errors.name, classes=['control-full']) }}
         {% endblock %}
 
         {% block basic_fields_format %}
