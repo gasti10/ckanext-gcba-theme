@@ -4,7 +4,7 @@ Repositorio de la extensión del Portal [data.buenosaires.gob.ar](http://data.bu
 
 - [Instalación](#instalaci%C3%B3n)
 - [Estructura de archivos](#estructura-de-archivos)
-- [Uso del theme](#uso-del-theme) --> HACER
+- [Uso del theme](#uso-del-theme)
 - [Créditos](#cr%C3%A9ditos)
 
 ## Instalación
