@@ -2,13 +2,13 @@ function validLength(length, maxLength) {
     return maxLength >= length;
 }
 
-function validTitle(){
+function validTitle() {
     var titleLength = $('input[data-valid-title-length]').val().length;
     var validTitleLength = $('input[data-valid-title-length]').data('valid-title-length');
     return validLength(titleLength, validTitleLength);
 }
 
-function validDesc(){
+function validDesc() {
     var descLength = $('textarea[data-valid-desc-length]').val().length
     var validDescLength = $('textarea[data-valid-desc-length]').data('valid-desc-length')
     return validLength(descLength, validDescLength);
@@ -157,9 +157,9 @@ $(function () {
         isFormValid = isValid && validTitle() && validDesc()
 
         if (!isFormValid) {
-             window.scrollTo(0, 0);
-             window.scrollTo(0, 0);
-         }
+            window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
+        }
 
 
         return isFormValid;
@@ -195,56 +195,63 @@ $(function () {
 
     var dates = $('.date-picker').data('dates');
     var dateFrom, dateTo;
-    if (dates.indexOf('/')) {
-        dates = dates.split('/');
-        dateFrom = new Date(dates[0]);
-        dateTo = new Date(dates[1]);
-    } else {
-        dateFrom = new Date(dates);
-    }
-    if (dateFrom instanceof Date && isFinite(dateFrom)) {
-        $('#date-from').datepicker('setDate', dateFrom);
-        var hoursFrom = dateFrom.getHours();
-        var minutesFrom = dateFrom.getMinutes();
-        if (hoursFrom != 0 || minutesFrom != 0) {
-            hoursFrom = hoursFrom < 10 ? '0' + hoursFrom : hoursFrom.toString();
-            minutesFrom = minutesFrom < 10 ? '0' + minutesFrom : minutesFrom.toString();
-            $('#date_with_time').prop('checked', true);
-            $('.hour-picker-to, .hour-picker-from').removeClass('hidden');
-            $('#date-from-hour').val(hoursFrom);
-            $('#date-from-minute').val(minutesFrom);
+    if (dates !== undefined) {
+        if (dates.indexOf('/')) {
+            dates = dates.split('/');
+            dateFrom = new Date(dates[0]);
+            dateTo = new Date(dates[1]);
+        } else {
+            dateFrom = new Date(dates);
         }
-    }
-    if (dateTo instanceof Date && isFinite(dateTo)) {
-        $('#date-to').datepicker('setDate', dateTo);
-        var hoursTo = dateTo.getHours();
-        var minutesTo = dateTo.getMinutes();
-        if (hoursTo != 0 || minutesTo != 0) {
-            hoursTo = hoursTo < 10 ? '0' + hoursTo : hoursTo.toString();
-            minutesTo = minutesTo < 10 ? '0' + minutesTo : minutesTo.toString();
-            $('#date_with_time').prop('checked', true);
-            $('.hour-picker-to, .hour-picker-to').removeClass('hidden');
-            $('#date-to-hour').val(hoursTo);
-            $('#date-to-minute').val(minutesTo);
+        if (dateFrom instanceof Date && isFinite(dateFrom)) {
+            $('#date-from').datepicker('setDate', dateFrom);
+            var hoursFrom = dateFrom.getHours();
+            var minutesFrom = dateFrom.getMinutes();
+            if (hoursFrom != 0 || minutesFrom != 0) {
+                hoursFrom = hoursFrom < 10 ? '0' + hoursFrom : hoursFrom.toString();
+                minutesFrom = minutesFrom < 10 ? '0' + minutesFrom : minutesFrom.toString();
+                $('#date_with_time').prop('checked', true);
+                $('.hour-picker-to, .hour-picker-from').removeClass('hidden');
+                $('#date-from-hour').val(hoursFrom);
+                $('#date-from-minute').val(minutesFrom);
+            }
+        }
+        if (dateTo instanceof Date && isFinite(dateTo)) {
+            $('#date-to').datepicker('setDate', dateTo);
+            var hoursTo = dateTo.getHours();
+            var minutesTo = dateTo.getMinutes();
+            if (hoursTo != 0 || minutesTo != 0) {
+                hoursTo = hoursTo < 10 ? '0' + hoursTo : hoursTo.toString();
+                minutesTo = minutesTo < 10 ? '0' + minutesTo : minutesTo.toString();
+                $('#date_with_time').prop('checked', true);
+                $('.hour-picker-to, .hour-picker-to').removeClass('hidden');
+                $('#date-to-hour').val(hoursTo);
+                $('#date-to-minute').val(minutesTo);
+            }
         }
     }
 
-    $(document).ajaxComplete(function(){
-        $('.slug-preview').each(function() {
+    $(document).ajaxComplete(function () {
+        $('.slug-preview').each(function () {
             $(this).insertAfter($('div#field-title'));
         });
     });
 
-    $(document).ready(function(){
-        $('input[data-valid-title-length]').on('change input keyup', validateTitle)
-        validateTitle()
+    $(document).ready(function () {
+        var validTitleLength = $('input[data-valid-title-length]');
+        if (validTitleLength.length > 0) {
+            validTitleLength.on('change input keyup', validateTitle);
+            validateTitle()
+        }
 
+        var validDescLength = $('textarea[data-valid-desc-length]');
+        if (validDescLength.length > 0) {
+            validDescLength.on('change input keyup', validateDesc);
+            validateDesc()
+        }
+    });
 
-        $('textarea[data-valid-desc-length]').on('change input keyup', validateDesc)
-        validateDesc()
-     });
-
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
         var urlPreview = $('.slug-preview');
         if (urlPreview.length > 0) {
             clearInterval(interval);
