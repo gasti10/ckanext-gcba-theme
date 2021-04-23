@@ -883,11 +883,15 @@ a:hover .group-text .group-table {
   margin-bottom: 15px !important;
   color: #000000 !important;
 }
-.package #pkg-main-info #pkg-title-and-desc .pkg-author,
+.package #pkg-main-info #pkg-title-and-desc .pkg-author{
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--grisulado-30-texto-deshabilitado) !important;
+}
 .package #pkg-main-info #pkg-title-and-desc .pkg-notes {
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: #525252 !important;
+  color: var(--grisulado-90-texto-primario) !important;
 }
 .package #pkg-main-info #pkg-title-and-desc .pkg-author a path {
   fill: #fed11a !important;
