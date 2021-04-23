@@ -1,7 +1,5 @@
 # [data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
 
-CORRGIR
-
 Repositorio de la extensión del Portal [data.buenosaires.gob.ar](http://data.buenosaires.gob.ar/) de la Ciudad de Buenos Aires para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero.
 
 - [Instalación](#instalaci%C3%B3n)
