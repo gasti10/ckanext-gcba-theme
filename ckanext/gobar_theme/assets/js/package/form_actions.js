@@ -238,6 +238,10 @@ $(function () {
     });
 
     $(document).ready(function () {
+        $("input").on("change keyup", function () {
+            $(".form-actions").children().prop("disabled", false)
+        });
+
         var validTitleLength = $('input[data-valid-title-length]');
         if (validTitleLength.length > 0) {
             validTitleLength.on('change input keyup', validateTitle);
