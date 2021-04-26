@@ -50,8 +50,8 @@
         {{ form.image_upload(data, errors, field_url='url', field_upload='upload', field_clear='clear_upload', is_upload_enabled=false, is_url=data.url, url_label=_('URL'),placeholder=_('http://example.com/external-data.csv'), field_name='name') }}
         {% endblock %}
 
-        {% block basic_fields_upload %}
-            {{ form.input('upload', id='field-name', label=_('Filename'), placeholder=_('Input para el campo upload'), value=data.upload, error=errors.name, classes=['control-full']) }}
+        {% block basic_fields_filename %}
+            {{ form.input('fileName', id='field-name', label=_('Filename'), placeholder=_('Input para el campo upload'), value=data.fileName, error=errors.name, classes=['control-full']) }}
         {% endblock %}
 
         {% block basic_fields_format %}
