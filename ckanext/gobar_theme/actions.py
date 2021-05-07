@@ -6,6 +6,7 @@ import re
 import sys
 from ckan.lib.helpers import literal
 import ckan.lib.helpers as h
+import ckanext.gobar_theme.helpers as h_gobar
 
 _get_action = logic.get_action
 
@@ -59,7 +60,7 @@ def dataset_delete_and_purge(context, data_dict):
 
 
 def organization_delete_and_purge(context, data_dict):
-    for suborganization in h.get_suborganizations():
+    for suborganization in h_gobar.get_suborganizations():
         logic.action.delete._group_or_org_delete(context, {'id': suborganization}, is_org=True)
         logic.action.delete.group_purge(context, {'id': suborganization})
     logic.action.delete._group_or_org_delete(context, data_dict, is_org=True)

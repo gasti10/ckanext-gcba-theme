@@ -27,7 +27,8 @@
                     {% if c.code == '404' %}
                         La pagina solicitada no se ha encontrado
                     {% else %}
-                        Ups, ha ocurrido un error
+                        Ups, ha ocurrido un error o esta página ya no existe.
+                        {% set flash_messages = h.flash.pop_messages() %}
                     {% endif %}
                 </div>
             </div>
