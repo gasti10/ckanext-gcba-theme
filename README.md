@@ -1,23 +1,17 @@
-# [datos.gob.ar](http://datos.gob.ar/)
+# [Data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/)
 
-CORRGIR
-
-Repositorio de la extensión del Portal [datos.gob.ar](http://datos.gob.ar/) de la República Argentina para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero. El repositorio central del proyecto del Portal datos.gob.ar es [portal_datos.gob.ar](https://github.com/datosgobar/portal_datos.gob.ar)
+Repositorio de la extensión del Portal [data.buenosaires.gob.ar](http://data.buenosaires.gob.ar/) de la Ciudad de Buenos Aires para [CKAN](http://ckan.org/). Este proyecto se encarga de modificaciones al ruteo de la aplicación web, cambios visuales a la interfaz, y customización del portal, entre otros. Este repositorio *no* constituye el proyecto entero.
 
 - [Instalación](#instalaci%C3%B3n)
-- [Desarrollo](#desarrollo)
 - [Estructura de archivos](#estructura-de-archivos)
-- [Uso del theme](#uso-del-theme) --> HACER
+- [Uso del theme](#uso-del-theme)
 - [Créditos](#cr%C3%A9ditos)
-- [Consultas sobre Andino](#consultas-sobre-andino)
 
 ## Instalación
 
-HACER
+Correr dentro del entorno virtual de python(venv) para instalaciones hechas con Docker:
 
-## Desarrollo
-
-Como alternativa a la instalación dockerizada existe la posibilidad de tener una instalación contenida en un `virtualenv` del sistema. Esto se puede obtener siguiendo las instrucciones de [esta guia](http://docs.ckan.org/en/ckan-2.5.2/maintaining/installing/install-from-source.html). Una vez instalado el paquete a nivel sistema, es posible linkear el proceso principal a un debbuger de python (por ej pycharm). Este metodo no es recomendado para hacer modificaciones que impacten en el manejo del servidor por parte del wsgi de apache o nginx. Para dicho caso, es necesario tener una instalación de la aplicación dockerizada y acceder al contenedor del theme para realizar el desarrollo necesario.
+    -pip install -e "git+https://github.com/gasti10/ckanext-gobar-theme.git#egg=ckanext-gobar_theme"
 
 ### Estructura de archivos
 
@@ -39,6 +33,10 @@ Como alternativa a la instalación dockerizada existe la posibilidad de tener un
         - package_controller.py # controlador de lógica de datasets y recursos, sobreescribe y/o extiende la lógica de ckan
         - plugin.py # archivo que registra el repositorio como extensión de ckan y declara acciones, helpers y ruteo
 ```
+
+## Uso del theme
+
+La extensión sirve para darle una nueva vista al CKAN original, fue desarrollada utilizando como base el gobar_theme de Nación(https://github.com/datosgobar/datos.gob.ar) y refactorizado para darle la visual requerida por el Gobierno de la Ciudad de Buenos Aires. Aún contiene algunas fallas en los estilos debido a las nuevas actualizaciones que sufrió el CKAN y que fueron "parcheadas" sobre la marcha.
 
 ## Créditos
 

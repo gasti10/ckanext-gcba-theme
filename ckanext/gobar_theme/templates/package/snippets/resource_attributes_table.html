@@ -5,45 +5,45 @@
 {% if attributes|length > 0 %}
 <div class="resource-attributes col-xs-12 no-padding">
     <h2>Campos del recurso</h2>
-    <table>
+    <table class="table table-striped header-fixed">
         <colgroup>
             <col class="col-attribute">
             <col class="col-attribute">
             {% if hasAtLeastOneUnit %}
-                <col class="col-attribute">
+            <col class="col-attribute">
             {% endif %}
             {% if hasAtLeastOneId %}
-                <col class="col-attribute">
+            <col class="col-attribute">
             {% endif %}
             <col class="col-description">
         </colgroup>
         <thead>
-            <tr>
+            <tr class="gradient">
                 <th>Nombre</th>
                 <th>Tipo</th>
                 {% if hasAtLeastOneUnit %}
-                    <th>Unidad</th>
+                <th>Unidad</th>
                 {% endif %}
                 {% if hasAtLeastOneId %}
-                    <th>Identificador</th>
+                <th>Identificador</th>
                 {% endif %}
                 <th>Descripción</th>
             </tr>
         </thead>
         <tbody>
-        {% for attribute_group in attributes %}
+            {% for attribute_group in attributes %}
             <tr>
                 <td>{{ attribute_group.get('title', '') }}</td>
                 <td>{{ attribute_group.get('type', '') }}</td>
                 {% if hasAtLeastOneUnit %}
-                    <td>{{ attribute_group.get('unit', '') }}</td>
+                <td>{{ attribute_group.get('unit', '') }}</td>
                 {% endif %}
                 {% if hasAtLeastOneId %}
-                    <td>{{ attribute_group.get('id', '') }}</td>
+                <td>{{ attribute_group.get('id', '') }}</td>
                 {% endif %}
                 <td>{{ attribute_group.get('description', '') }}</td>
             </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
 
     </table>

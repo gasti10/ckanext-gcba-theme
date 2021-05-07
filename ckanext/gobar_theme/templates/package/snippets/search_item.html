@@ -17,17 +17,17 @@
                 </div>
             </div>
             {%- for group in package.groups -%}
-            {%- if group.image_display_url and group.image_display_url|length > 0 -%}
-            <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image" style="width: 20px;">
-            {%- endif -%}
+                {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+                    <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image" style="width: 20px;">
+                {%- endif -%}
             {%- endfor -%}
             <span style="color: black">&nbsp;|</span>
             {%- for original_format in h.dict_list_reduce(package.resources, 'format') -%}
-            {% if original_format == "" or original_format|lower not in h.accepted_mime_types() %}
-            {% set display_format = "otro" %}
-            {% else %}
-            {% set display_format = original_format %}
-            {% endif %}
+                {% if original_format == "" or original_format|lower not in h.accepted_mime_types() %}
+                    {% set display_format = "otro" %}
+                {% else %}
+                    {% set display_format = original_format %}
+                {% endif %}
             <span data-format="{{ display_format.lower() }}">{{ display_format.lower() }}</span>
             {%- endfor -%}
 

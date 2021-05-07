@@ -32,8 +32,7 @@
       margin-bottom: 15px;
       h1 {
         color: $blue-300;
-        margin: $top-space 0 0 0;
-        font-size: 50px;
+        font-size: 25px;
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -92,12 +91,10 @@
             }
             thead {
                 tr {
-                    background: $blue-300;
-                    color: white;
                     th {
                         font-weight: 500;
                         padding: 10px;
-                        text-align: left;
+                        text-align: center;
                         border-left: solid 1px white;
                         border-right: solid 1px white;
                         &:last-child,
@@ -115,13 +112,10 @@
                     border-top: 1px solid $grey-200;
                     &:nth-child(even) {
                     }
-                    &:last-child {
-                        border-bottom: solid 5px $blue-300;
-                    }
 
                     td {
                         padding: 10px;
-                        text-align: left;
+                        text-align: center;
                         font-weight: 400;
                         border-right: 1px solid $grey-200;
                         border-left: 1px solid $grey-200;

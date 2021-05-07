@@ -13,14 +13,16 @@
   }
 }
 
-.modal-backdrop.in {
-  background: white;
-  opacity: 0.8;
-}
 
 .modal {
   border: none;
   @include border-radius(4px);
+
+  .modal-header {
+    .close {
+      opacity: 1;
+    }
+  }
 
   .modal-dialog {
     width: 100%;

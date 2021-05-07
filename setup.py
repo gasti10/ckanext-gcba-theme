@@ -19,8 +19,8 @@ setup(
     url='https://github.com/datosgobar/datos.gob.ar',
 
     # Author details
-    author='''Ignacio Heredia''',
-    author_email='''ignacio.nh@gmail.com''',
+    author='''Ignacio Heredia & Refactor -> Gaston Jouglard''',
+    author_email='''gastonjouglard.10@gmail.com''',
 
     # Choose your license
     license='AGPL',
@@ -40,6 +40,7 @@ setup(
         # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7.9',
     ],
 
     # What does your project relate to?

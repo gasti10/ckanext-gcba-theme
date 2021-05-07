@@ -571,9 +571,8 @@ COMPONENTS:
   width: 45px !important;
   height: 100% !important;
   color: #ffffff !important;
-  background: url('/img/search.svg') center center no-repeat !important;
+  background-color: transparent !important;
   background-size: 20px !important;
-  background-color: #222222 !important;
   border-radius: 0 6px 6px 0 !important;
 }
 #title #searcher .search-form button img {
@@ -884,14 +883,15 @@ a:hover .group-text .group-table {
   margin-bottom: 15px !important;
   color: #000000 !important;
 }
-.package #pkg-main-info #pkg-title-and-desc .pkg-author,
+.package #pkg-main-info #pkg-title-and-desc .pkg-author{
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--grisulado-30-texto-deshabilitado) !important;
+}
 .package #pkg-main-info #pkg-title-and-desc .pkg-notes {
   font-size: 14px !important;
   font-weight: 400 !important;
-  color: #525252 !important;
-}
-.package #pkg-main-info #pkg-title-and-desc .pkg-author {
-  color: #bfbfbf !important;
+  color: var(--grisulado-90-texto-primario) !important;
 }
 .package #pkg-main-info #pkg-title-and-desc .pkg-author a path {
   fill: #fed11a !important;
@@ -917,7 +917,7 @@ a:hover .group-text .group-table {
 .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
   width: 100% !important;
   right: 15px !important;
-  margin: -40px 0 0 0 !important;
+  margin: -50px 0 0 0 !important;
 }
 .pkg-container .package-info {
   padding: 0 0 20px 62px !important;

@@ -2,12 +2,7 @@
 {% set format = format or "" %}
 <div class="pkg-container">
     <div class="pkg-actions">
-        <a href="{{ resource_url }}">
-            <button>CONSULTAR</button>
-        </a>
-        <a href="{{ resource.url }}">
-            <button>DESCARGAR</button>
-        </a>
+        <a class="btn" href="{{ resource.url }}">DESCARGAR</a>
     </div>
     <a href="{{ resource_url }}">
         <div class="package-info">

@@ -15,6 +15,9 @@ replace_svg:
   output: ckanext-gobar-theme/%(version)s_replace_svg.js
   contents:
     - replace_svg.js
+  extra:
+    preload:
+      - vendor/jquery
 
 forms:
   filters: rjsmin
@@ -47,6 +50,7 @@ search:
   extra:
     preload:
       - gobar_js/replace_svg
+      - vendor/jquery
   contents:
     - search/groups.js
     - search/filters.js
@@ -62,8 +66,8 @@ groups_home:
   output: ckanext-gobar-theme/%(version)s_groups_home.js
   extra:
     preload:
-      - vendor/jquery
       - gobar_js/replace_svg
+      - vendor/jquery
   contents:
     - home/groups.js
 
@@ -73,6 +77,7 @@ group:
   extra:
     preload:
       - gobar_js/replace_svg
+      - vendor/jquery
   contents:
     - group/form_actions.js  
 
@@ -91,6 +96,7 @@ package:
   output: ckanext-gobar-theme/%(version)s_package.js
   extra:
     preload:
+      - gobar_js/replace_svg
       - vendor/jquery
   contents:
     - package/form_actions.js

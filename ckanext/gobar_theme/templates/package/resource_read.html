@@ -33,9 +33,9 @@
                 {% endif %}
             </div>
             <div class="col-xs-12 title">
-                <h1>{{ res.name }}</h1>
+                <h1 class="pkg-title">{{ res.name }}</h1>
 
-                <p>{{ res.description }}</p>
+                <p class="pkg-author">{{ res.description }}</p>
                 <a href="{{ res.url }}">
                     <button>DESCARGAR</button>
                 </a>
@@ -53,37 +53,37 @@
                 {% set resource_preview = h.resource_preview(c.resource, c.package) %}
                 {% set views_created = res.has_views or resource_preview %}
                 {% if views_created %}
-                {% if resource_preview and not current_resource_view %}
-                {{ h.resource_preview(c.resource, c.package) }}
+                    {% if resource_preview and not current_resource_view %}
+                        {{ h.resource_preview(c.resource, c.package) }}
+                    {% else %}
+                        {% for resource_view in resource_views %}
+                            {% if resource_view == current_resource_view %}
+                                {% snippet 'package/snippets/resource_view.html',
+                                            resource_view=resource_view,
+                                            resource=resource,
+                                            package=package %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
                 {% else %}
-                {% for resource_view in resource_views %}
-                {% if resource_view == current_resource_view %}
-                {% snippet 'package/snippets/resource_view.html',
-                resource_view=resource_view,
-                resource=resource,
-                package=package %}
-                {% endif %}
-                {% endfor %}
-                {% endif %}
-                {% else %}
-                {% if h.check_access('resource_view_create', {'resource_id': c.resource.id}) %}
-                <p class="muted">
-                    <i class="icon-info-sign"></i>
-                    {{ _("Not seeing the views you were expecting?") }}
-                    <a href="javascript:void(0);" data-toggle="collapse" data-target="#data-view-info">
-                        {{ _('Click here for more information.') }}</a>
-                </p>
-                <div id="data-view-info" class="collapse">
-                    <p>{{ _('Here are some reasons you may not be seeing expected views:') }}</p>
-                    <ul>
-                        <li>{{ _("No view has been created that is suitable for this resource") }}</li>
-                        <li>{{ _("The site administrators may not have enabled the relevant view plugins") }}</li>
-                        <li>{{ _("If a view requires the DataStore, the DataStore plugin may not be enabled, or the data
-                            may not have been pushed to the DataStore, or the DataStore hasn't finished processing the
-                            data yet") }}</li>
-                    </ul>
-                </div>
-                {% endif %}
+                    {% if h.check_access('resource_view_create', {'resource_id': c.resource.id}) %}
+                        <p class="muted">
+                            <i class="icon-info-sign"></i>
+                            {{ _("Not seeing the views you were expecting?") }}
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#data-view-info">
+                                {{ _('Click here for more information.') }}</a>
+                        </p>
+                        <div id="data-view-info" class="collapse">
+                            <p>{{ _('Here are some reasons you may not be seeing expected views:') }}</p>
+                            <ul>
+                                <li>{{ _("No view has been created that is suitable for this resource") }}</li>
+                                <li>{{ _("The site administrators may not have enabled the relevant view plugins") }}</li>
+                                <li>{{ _("If a view requires the DataStore, the DataStore plugin may not be enabled, or the data
+                                    may not have been pushed to the DataStore, or the DataStore hasn't finished processing the
+                                    data yet") }}</li>
+                            </ul>
+                        </div>
+                    {% endif %}
                 {% endif %}
             </div>
 
@@ -95,14 +95,21 @@
             <div class="resource-alternative-packages col-xs-12 col-md-12">
                 <h2>Otros recursos de este conjunto de datos</h2>
                 {% for resource in pkg.resources %}
-                {% if resource.id != res.id %}
-                {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}
-                {% set format = "otro" %}
-                {% else %}
-                {% set format = resource.format %}
-                {% endif %}
-                {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format %}
-                {% endif %}
+                    {% set mostrar = true %}
+                    {% if resource.id != res.id %}
+                        {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}
+                            {% if resource.datastore_active == False and resource.url == "" and resource.description == "" and resource.position == 0 %}
+                                {% set mostrar = false %}
+                            {% else %}    
+                                {% set format = "otro" %}
+                            {% endif %}
+                        {% else %}
+                            {% set format = resource.format %}
+                        {% endif %}
+                        {% if mostrar %}
+                            {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource, format=format %}
+                        {% endif %}
+                    {% endif %}
                 {% endfor %}
             </div>
             {% endif %}

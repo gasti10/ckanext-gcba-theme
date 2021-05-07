@@ -12,6 +12,7 @@
     h1 {
       color: $blue-300;
       margin: 20px 0;
+      font-size: 25px;
     }
 
     form {
@@ -155,7 +156,7 @@
       }
       ol.stages {
         margin: 0 0 50px 0;
-        background: $grey-200;
+        background: $grey-200 !important;
         li {
           background: transparent;
           color: black;
@@ -179,8 +180,9 @@
           }
           &.complete {
             .highlight {
+              padding: 10px 52px !important;
               color: white;
-              background: $grey-200;
+              background: $grey-200 !important;
             }
           }
         }

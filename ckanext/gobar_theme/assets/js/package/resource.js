@@ -1,13 +1,13 @@
 $(function () {
     var data = $('#edit-package-container').data();
-    $(document).ready(function(){
-        if (sessionStorage.getItem('previousUrlCKAN') == null){
+    $(document).ready(function () {
+        if (sessionStorage.getItem('previousUrlCKAN') == null && data !== undefined) {
             sessionStorage.setItem('previousUrlCKAN', data.refererUrl);
         }
     });
-    $('a#back-button').on('click', function(){
+    $('a#back-button').on('click', function () {
         var url;
-        if (sessionStorage.getItem('previousUrlCKAN') == ""){
+        if (sessionStorage.getItem('previousUrlCKAN') == "" && data !== undefined) {
             //Si apretamos volver y luego ponemos en el browser el link de, por ejemplo, resource_data y no se guarda
             //ninguna url en el sessionStorage
             url = data.backUrl;
