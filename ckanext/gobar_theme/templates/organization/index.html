@@ -43,7 +43,9 @@
                                     {%- endif -%}
 
                                     {%- if organization.package_count > 0 -%}
-                                            {{ organization.display_name }} ({{ organization.package_count }})
+                                            <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
+                                                {{ organization.display_name }} ({{ organization.package_count }})
+                                            </a>
                                     {%- else -%}
                                         {{ organization.display_name }}
                                     {%- endif -%}
