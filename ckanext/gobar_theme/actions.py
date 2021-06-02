@@ -7,6 +7,7 @@ import sys
 from ckan.lib.helpers import literal
 import ckan.lib.helpers as h
 import ckanext.gobar_theme.helpers as h_gobar
+import ckan.model as model
 
 _get_action = logic.get_action
 
