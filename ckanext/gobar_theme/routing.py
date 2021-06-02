@@ -50,7 +50,7 @@ class GobArRouter:
         )
 
     def connect_datasets(self):
-        with SubMapper(self.route_map, controller=s'package') as m:
+        with SubMapper(self.route_map, controller='package') as m:
             m.connect('search', '/dataset', action='search', highlight_actions='index search')
             m.connect('add dataset', '/dataset/new', action='new')
             m.connect('edit dataset', '/dataset/edit/{id}', action='edit')
