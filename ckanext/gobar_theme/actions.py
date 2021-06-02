@@ -33,10 +33,7 @@ def _resource_purge(context, data_dict):
 
 def _resource_delete_from_datastore(context, data_dict):
     id = logic.get_or_bust(data_dict, 'id')
-    print(data_dict)
-    datastore_active = logic.get_or_bust(data_dict, 'datastore_active')
-    if(datastore_active == True):
-        ckanext.datastore.logic.action.datastore_delete(context, {'resource_id': id, 'force': True})
+    ckanext.datastore.logic.action.datastore_delete(context, {'resource_id': id, 'force': False})
 
 
 def resource_delete_and_purge(context, data_dict):
