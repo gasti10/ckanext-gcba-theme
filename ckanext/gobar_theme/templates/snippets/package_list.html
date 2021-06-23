@@ -19,8 +19,13 @@ Example:
     <ul class="{{ list_class or 'dataset-list list-unstyled' }}">
     	{% block package_list_inner %}
 	      {% for package in packages %}
-	        {% if package.private or package.state == 'draft' %}
+	        {% if draft %}
+	        	{% if package.private or package.state == 'draft' %}
+	        		{% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
+	        	{% endif %}	
+	        {% else %}
 	        	{% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title %}
+	        {% endif %}			
 	      {% endfor %}
 	    {% endblock %}
     </ul>
