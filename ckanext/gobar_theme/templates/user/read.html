@@ -9,11 +9,6 @@
   {% block package_list %}
   {% if user.datasets %}
     {% set datasets_drafts = [] %}
-    {%- for package in user.datasets -%}
-      {% if package.private or package.state == 'draft' %}
-          {{ datasets_drafts.append(package) }}
-      {% endif %}
-    {%- endfor -%}
     {% snippet 'snippets/package_list.html', packages=user.datasets %}
   {% else %}
     {% if is_myself %}
