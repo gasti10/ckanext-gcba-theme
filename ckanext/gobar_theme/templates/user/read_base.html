@@ -6,6 +6,7 @@
 
 {% block breadcrumb_content %}{% endblock %}
 
+{% block content %}
 {% block content_action %}
   {% if h.check_access('user_update', user) %}
     {% link_for _('Manage'), named_route='user.edit', id=user.name, class_='btn btn-default', icon='wrench' %}
@@ -97,4 +98,5 @@
     {% endblock %}
   </section>
 </div>
+{% endblock %}
 {% endblock %}
