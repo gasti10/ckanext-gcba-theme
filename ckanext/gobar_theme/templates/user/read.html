@@ -10,7 +10,7 @@
   {% if user.datasets %}
     {% set datasets_drafts = [] %}
     {%- for package in user.datasets -%}
-      {% if package.private or package.state == 'draft' and not is None %}
+      {% if package.private or package.state == 'draft' and package != None %}
           {{ datasets_drafts.append(package) }}
       {% endif %}
     {%- endfor -%}
