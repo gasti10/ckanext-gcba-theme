@@ -47,8 +47,8 @@
         {% endblock %}
 
         {% block basic_fields_type %}
-            { form.select('type', label=_('Tipo de recurso'), 
-                options=[{'name':'archivo', 'value': 'Archivo de datos'},{'name': 'API', 'value': 'API'},{'name':'codigo', 'value': 'Código'},{'name':'documentacion', 'value': 'Documentación'}], selected='archivo', error=errors.type) }
+            {{ form.select('type', label=_('Tipo de recurso'), 
+                options=[{'name':'archivo', 'value': 'Archivo de datos'},{'name': 'API', 'value': 'API'},{'name':'codigo', 'value': 'Código'},{'name':'documentacion', 'value': 'Documentación'}], selected='archivo', error=errors.type) }}
         {% endblock %}
 
         {% block basic_fields_url %}
